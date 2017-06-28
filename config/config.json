@@ -2,7 +2,7 @@
   "development": {
     "username": "chadwick",
     "password": null,
-    "database": "todo_sql",
+    "database": "todos",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },

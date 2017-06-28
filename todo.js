@@ -22,14 +22,13 @@ res.render('todo', {});
 });
 
 app.post('/', function(req, res) {
-  const getToDo = models.ToDo.build({
-    Item: req.body.input,
-    Completed: false
-  });
-  getToDo.save().then(function(todo) {
+  const getToDo = models.todolist.build({
+    item: req.body.input,
+    completed: false
+  }).save().then(function(todo) {
     res.redirect('/')
   })
-  console.log(getToDo);
+  console.log(req.body.input);
 });
 
 app.listen(3000, function () {
